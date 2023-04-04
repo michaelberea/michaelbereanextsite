@@ -170,3 +170,16 @@
 .link:hover {
   color: #565656;
   text-decoration: underline;}
+
+
+/* font */
+@font-face {
+  font-family: 'Raleway';
+  src: url('/public/fonts/Raleway/static/Raleway-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  font-family: 'Raleway', sans-serif;
+}
