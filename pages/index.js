@@ -19,7 +19,7 @@ export default function Home() {
                 className={styles.image}
               />
             </div>
-            <h1 className={styles.heading}>Michael W Berea</h1>
+            <h1 className={styles.heading}>Michael Berea</h1>
             <p className={styles.paragraph}>I love my <a target={'_blank'} className={styles.link} href="https://www.livinglightchurch.com/kenosha-wisconsin/">local church</a></p>
             <p className={styles.paragraph}>I'm a <a target={'_blank'} className={styles.link} href="https://github.com/michaelberea">software developer</a></p>
             <p className={styles.paragraph}>I like to play the <a target={'_blank'} className={styles.link} href="https://www.youtube.com/watch?v=6VjWaBhikwE">bass</a></p>
