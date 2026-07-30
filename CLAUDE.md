@@ -83,14 +83,16 @@ phrasing beats polished template language every time — when in doubt, keep his
 
 ## Open tasks
 
-- [ ] **Photos.** One environmental portrait (garage / Nighthawk / stump
-      grinder), grayscale-treated to sit in the palette:
-      `filter: grayscale(1) contrast(1.06); mix-blend-mode: multiply;`
-      Raw color photos will fight the design. Slot goes in the masthead beside
-      the manifest. Skip project screenshots — they read as filler.
-- [ ] **OG image** at `public/og.jpg`, 1200×630. Typographic, not photographic:
-      name in Libre Franklin on `--ink`. Wire into `metadata.openGraph.images`.
-      Currently link shares render blank.
+- [ ] **Photos.** The masthead slot is built (`.portrait` in `globals.css`,
+      beside the manifest, grayscale + multiply already applied in CSS).
+      `public/portrait.jpg` is a generated placeholder — shoot one
+      environmental portrait (garage / Nighthawk / stump grinder) at 4:5,
+      drop it in at the same path, and update `portrait.alt` in `lib/site.js`.
+      Hand it a normal color photo; the CSS does the treatment. Skip project
+      screenshots — they read as filler.
+- [x] **OG image** — `public/og.jpg`, 1200×630, name in Libre Franklin 800 on
+      `--ink` with a brass eyebrow and a mono footer rule. Wired into
+      `metadata.openGraph.images` and `twitter.images` in `app/layout.js`.
 - [ ] **Favicon** — `public/favicon.ico` plus an apple-touch-icon.
 - [ ] `site.email` in `lib/site.js` is a placeholder. Set it or drop the
       contact entry.

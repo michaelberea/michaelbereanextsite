@@ -132,6 +132,48 @@ p {
   margin-bottom: 1.75rem;
 }
 
+/* Manifest sits left, portrait right. Portrait column collapses first. */
+.masthead__lower {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 15rem);
+  gap: clamp(1.75rem, 4vw, 3.25rem);
+  align-items: start;
+}
+
+.portrait {
+  margin: 0;
+}
+
+/* Color photos fight the palette — grayscale and multiply drop them into it. */
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.06);
+  mix-blend-mode: multiply;
+}
+
+.portrait figcaption {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 52rem) {
+  .masthead__lower {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait {
+    max-width: 13rem;
+  }
+}
+
 /* Manifest: the signature. A harbor-board listing of what he actually does. */
 .manifest {
   list-style: none;

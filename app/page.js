@@ -1,4 +1,4 @@
-import { site, manifest, about, projects, contact } from "../lib/site";
+import { site, manifest, portrait, about, projects, contact } from "../lib/site";
 import { getPosts } from "../lib/posts";
 
 export default function Home() {
@@ -13,14 +13,29 @@ export default function Home() {
         </h1>
         <div className="masthead__rule sweep" />
         <p className="lede rise rise-2">{site.tagline}</p>
-        <ul className="manifest rise rise-3">
-          {manifest.map((m) => (
-            <li key={m.key}>
-              <span className="manifest__key">{m.key}</span>
-              <span className="manifest__val">{m.val}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="masthead__lower rise rise-3">
+          <ul className="manifest">
+            {manifest.map((m) => (
+              <li key={m.key}>
+                <span className="manifest__key">{m.key}</span>
+                <span className="manifest__val">{m.val}</span>
+              </li>
+            ))}
+          </ul>
+          {portrait.src && (
+            <figure className="portrait">
+              <img
+                src={portrait.src}
+                alt={portrait.alt}
+                width="800"
+                height="1000"
+              />
+              {portrait.caption && (
+                <figcaption>{portrait.caption}</figcaption>
+              )}
+            </figure>
+          )}
+        </div>
       </header>
 
       <section className="band shell">
