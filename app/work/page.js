@@ -1,4 +1,4 @@
-import { roles, capabilities, about, beliefs } from "../../lib/site";
+import { roles, capabilities, about } from "../../lib/site";
 
 export const metadata = { title: "Work" };
 
@@ -44,16 +44,6 @@ export default function Work() {
             <li key={c}>{c}</li>
           ))}
         </ul>
-      </section>
-
-      <section className="band band--ink">
-        <div className="shell">
-          <span className="eyebrow">Convictions</span>
-          <h2 className="band__head">{beliefs.head}</h2>
-          {beliefs.body.map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-        </div>
       </section>
     </>
   );

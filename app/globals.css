@@ -14,6 +14,7 @@
   --brass: #b98a2e;
   --rule: rgba(22, 33, 43, 0.14);
   --rule-strong: rgba(22, 33, 43, 0.28);
+  --rule-patina: rgba(47, 107, 92, 0.32);
 
   --display: "Libre Franklin", "Helvetica Neue", Arial, sans-serif;
   --body: "Newsreader", Georgia, serif;
@@ -110,7 +111,8 @@ p {
 /* ---------- masthead ---------- */
 
 .masthead {
-  padding: clamp(4.5rem, 13vw, 8.5rem) 0 clamp(3rem, 7vw, 5rem);
+  padding-top: clamp(4.5rem, 13vw, 8.5rem);
+  padding-bottom: clamp(3rem, 7vw, 5rem);
 }
 
 .masthead__name {
@@ -127,7 +129,7 @@ p {
 
 .masthead__rule {
   height: 2px;
-  background: var(--ink);
+  background: var(--patina);
   transform-origin: left;
   margin-bottom: 1.75rem;
 }
@@ -144,15 +146,12 @@ p {
   margin: 0;
 }
 
-/* Color photos fight the palette — grayscale and multiply drop them into it. */
 .portrait img {
   display: block;
   width: 100%;
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  filter: grayscale(1) contrast(1.06);
-  mix-blend-mode: multiply;
 }
 
 .portrait figcaption {
@@ -179,7 +178,7 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-top: 1px solid var(--rule);
+  border-top: 1px solid var(--rule-patina);
 }
 
 .manifest li {
@@ -218,7 +217,7 @@ p {
 .topbar {
   position: relative;
   z-index: 3;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule-patina);
   background: var(--paper);
 }
 
@@ -268,7 +267,8 @@ p {
 /* ---------- sections ---------- */
 
 .band {
-  padding: clamp(3.25rem, 8vw, 6rem) 0;
+  padding-top: clamp(3.25rem, 8vw, 6rem);
+  padding-bottom: clamp(3.25rem, 8vw, 6rem);
   border-top: 1px solid var(--rule);
 }
 
@@ -530,8 +530,9 @@ p {
 /* ---------- footer ---------- */
 
 .foot {
-  border-top: 1px solid var(--rule);
-  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--rule-patina);
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   font-family: var(--mono);
   font-size: 0.6875rem;
   letter-spacing: 0.1em;

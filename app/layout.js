@@ -27,7 +27,11 @@ export const metadata = {
   robots: { index: true, follow: true },
 };
 
-export const viewport = { themeColor: "#16212b" };
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#16212b",
+};
 
 const NAV = [
   { href: "/", label: "Home" },

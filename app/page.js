@@ -1,4 +1,4 @@
-import { site, manifest, portrait, about, projects, contact } from "../lib/site";
+import { site, manifest, portrait, about, roles, capabilities, projects, contact } from "../lib/site";
 import { getPosts } from "../lib/posts";
 
 export default function Home() {
@@ -44,9 +44,31 @@ export default function Home() {
         {about.slice(0, 2).map((p, i) => (
           <p key={i}>{p}</p>
         ))}
-        <p>
+      </section>
+
+      <section className="band shell">
+        <span className="eyebrow">Selected experience</span>
+        <h2 className="band__head">What that actually looks like</h2>
+        <article className="role">
+          <div className="role__when">{roles[0].when}</div>
+          <div>
+            <h3 className="role__title">{roles[0].title}</h3>
+            <p className="role__org">{roles[0].org}</p>
+            <ul>
+              {roles[0].points.map((pt, i) => (
+                <li key={i}>{pt}</li>
+              ))}
+            </ul>
+          </div>
+        </article>
+        <ul className="rail" style={{ marginTop: "1.5rem" }}>
+          {capabilities.slice(0, 8).map((c) => (
+            <li key={c}>{c}</li>
+          ))}
+        </ul>
+        <p style={{ marginTop: "1.5rem" }}>
           <a href="/work/" style={{ color: "var(--patina)" }}>
-            More on the work &rarr;
+            Full work history &rarr;
           </a>
         </p>
       </section>
@@ -95,8 +117,9 @@ export default function Home() {
         <div className="shell">
           <span className="eyebrow">Get in touch</span>
           <h2 className="band__head">
-            Happy to talk shop — banking systems, side projects,
-            or a site for your business.
+            Happy to talk shop: banking technology, .NET, product
+            development, SaaS, or whatever you&rsquo;re building. If
+            you&rsquo;ve got an interesting idea, I want to hear it.
           </h2>
           <div className="contact-grid">
             {contact.map((c) => (

@@ -77,7 +77,7 @@ Libre Franklin has **no width axis**. Never add `font-variation-settings: "wdth"
 ### Voice
 
 Plain, direct, specific. Concrete nouns over abstractions. No marketing
-register, no "passionate about," no em-dash-heavy throat-clearing. If a
+register, no "passionate about," no em-dashes whatsoever. If a
 sentence could appear on any engineer's site, it's wrong. Michael's own
 phrasing beats polished template language every time — when in doubt, keep his.
 
